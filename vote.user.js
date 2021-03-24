@@ -3,15 +3,49 @@
 // @namespace    https://github.com/FarisHijazi/wsis-voter
 // @version      0.1
 // @description  automates the voting process given a list of projects to vote for on: https://www.itu.int/net4/wsis/stocktaking/Prizes/2021/Vote
-// @author       You
+// @author       Faris Hijazi
 // @match        https://www.itu.int/net4/wsis/stocktaking/Prizes/2021/Vote*
 // @grant        none
 // ==/UserScript==
 
 
 var voteMap = {
-    "AL C1.": "<PROJECT NAME>",
+    "AL C1.": "Spectrum Auction 2019", // example
 };
+//  ^^^        ^^^
+// hi, you should change this, add as many lines as you'd like
+
+
+
+// =======================================
+//
+//  Don't change anything down here!
+//
+// =======================================
+
+
+if (Object.keys(voteMap).length == 0) {
+    alert("Votemap empty. Please go to the Tampermonkey extension and edit the WSIS voter script, and add your projects");
+}
+
+
+var ALL_CATEGORIES = [
+    "AL C1. The role of governments and all stakeholders in the promotion of ICTs for development",
+    "AL C2. Information and communication infrastructure",
+    "AL C3. Access to information and knowledge",
+    "AL C4. Capacity building",
+    "AL C5. Building confidence and security in use of ICTs",
+    "AL C6. Enabling environment",
+    "AL C7. E-government",
+    "AL C7. E-learning",
+    "AL C7. E-employment",
+    "AL C7. E-environment",
+    "AL C7. E-agriculture",
+    "AL C7. E-science",
+    "AL C8. Cultural diversity and identity, linguistic diversity and local content",
+    "AL C9. Media",
+    "AL C10. Ethical dimensions of the Information Society",
+];
 
 (function () {
     'use strict';
@@ -59,22 +93,3 @@ var voteMap = {
     }
 
 })();
-
-
-var allCats = [
-    "AL C1. The role of governments and all stakeholders in the promotion of ICTs for development",
-    "AL C2. Information and communication infrastructure",
-    "AL C3. Access to information and knowledge",
-    "AL C4. Capacity building",
-    "AL C5. Building confidence and security in use of ICTs",
-    "AL C6. Enabling environment",
-    "AL C7. E-government",
-    "AL C7. E-learning",
-    "AL C7. E-employment",
-    "AL C7. E-environment",
-    "AL C7. E-agriculture",
-    "AL C7. E-science",
-    "AL C8. Cultural diversity and identity, linguistic diversity and local content",
-    "AL C9. Media",
-    "AL C10. Ethical dimensions of the Information Society",
-];
